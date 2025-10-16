@@ -1,14 +1,18 @@
 class Solution {
 public:
-//tc=o(n)
+//tc=o(n^2)
 //sc=o(1)
     vector<int> runningSum(vector<int>& arr) {
         int n=arr.size();
         vector<int>psum(n);
-        psum[0]=arr[0];
-        for(int i=1;i<n;i++)
+        for(int i=0;i<n;i++)
         {
-            psum[i]=psum[i-1]+arr[i];
+            int sum=0;
+            for(int j=0;j<=i;j++)
+            {
+                sum+=arr[j];
+            }
+            psum[i]=sum;
         }
         return psum;
     }

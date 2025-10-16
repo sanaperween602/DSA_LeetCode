@@ -1,7 +1,8 @@
 class Solution {
 public:
     vector<int> productExceptSelf(vector<int>& nums) {
-        
+        //TC=o(n)
+        //SC=o(1);
         int n=nums.size();
         int nonzero=1;
         int product=1;
